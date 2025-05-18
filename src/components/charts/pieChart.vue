@@ -15,12 +15,12 @@ type EChartsOption = echarts.EChartsOption;
 const pieChart = ref<HTMLElement | null>(null);
 
 const colorPalette = [
-  '#6DA9E4', // 浅蓝
-  '#7EC8A9', // 薄荷绿
-  '#F4BE87', // 浅橙
-  '#B8B3E9', // 薰衣草紫
-  '#88D3DB', // 天蓝
-  '#FFB6C1'  // 浅粉
+  '#D6E8FA', // hsl(210,10%,85%)
+  '#D1E5F5', // hsl(212,15%,85%)
+  '#CBE2F0', // hsl(214,20%,85%)
+  '#C5DFEB', // hsl(216,25%,85%)
+  '#BFDCE6', // hsl(218,30%,85%)
+  '#BAD9E2'  // hsl(220,30%,85%)
 ];
 
 let option: EChartsOption = {
@@ -46,6 +46,7 @@ let option: EChartsOption = {
   },
   series: [{
     type: 'pie',
+    color: colorPalette,
     radius: '55%',
     center: ['50%', '50%'],
     data: [...props.data].sort((a, b) => a.value - b.value),
@@ -65,9 +66,9 @@ let option: EChartsOption = {
       length2: 20
     },
     itemStyle: {
-      color: '#c23531',
-      shadowBlur: 200,
-      shadowColor: 'rgba(0, 0, 0, 0.1)'
+      color: (params) => colorPalette[params.dataIndex % colorPalette.length],
+      shadowBlur: 15,
+      shadowColor: 'rgba(150, 150, 150, 0.1)'
     },
     animationType: 'scale',
     animationEasing: 'elasticOut',
