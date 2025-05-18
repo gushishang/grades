@@ -72,7 +72,7 @@ let option: EChartsOption = {
     },
     animationType: 'scale',
     animationEasing: 'elasticOut',
-    animationDelay: (idx: number) => Math.random() * 200
+    animationDelay: () => Math.random() * 200
   }]
 };
 

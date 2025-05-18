@@ -49,7 +49,7 @@ option = {
       data: item.slice(1),
       label: {
         show: true,
-        position: "bottom",
+        position: "top",
       },
     };
   }),

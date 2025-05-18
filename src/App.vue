@@ -1,10 +1,7 @@
 <template>
   <div id="app" >
     <router-view v-slot="{ Component }">
-      <keep-alive>
-        <component :is="Component" v-if="$route.meta.keepAlive" :key="$route.fullPath" />
-      </keep-alive>
-      <component :is="Component" v-if="!$route.meta.keepAlive" :key="$route.fullPath" />
+      <component :is="Component" />
     </router-view>
   </div>
 </template>
