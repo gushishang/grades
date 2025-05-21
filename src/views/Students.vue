@@ -1,4 +1,5 @@
 <template>
+  <compareLineStack :names="['尚以诚','卢笑语','尹怡蒙']" classs="lineStack" sub="数学"></compareLineStack>
   <div><LineStack class="LineStack" :data="data" :tests="tests" title="总分" /></div>
   <div>
     <RadarChart
@@ -30,6 +31,7 @@
 import LineStack from "../components/charts/lineStack.vue";
 import RadarChart from "../components/charts/radarChart.vue";
 import PieChart from "../components/charts/pieChart.vue";
+import compareLineStack from "../components/compareLineStack.vue";
 const tests = ["25-3", "25-4", "25-5", "期中", 1, 2, 3, 4];
 
 const data = [
