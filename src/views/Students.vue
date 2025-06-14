@@ -32,7 +32,7 @@ import LineStack from "../components/charts/lineStack.vue";
 import RadarChart from "../components/charts/radarChart.vue";
 import PieChart from "../components/charts/pieChart.vue";
 import compareLineStack from "../components/compareLineStack.vue";
-const tests = ["25-3", "25-4", "25-5", "期中", 1, 2, 3, 4];
+const tests = ["25-3", "25-4", "25-5", "期中", "25-6",1, 2, 3, 4];
 
 const data = [
   ["学生", 41.1, 30.4, 65.1, 53.3, 40.1, 60, 30, 50, 30],
